@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1 th:text="|To proste jak ${2+2}|">
+Zawartość nagłówka
+</h1>
+<a href="/jan">Szegóły Jana</a>
+
+<form th:action="@(/find)" method="post">
+    <input name="lastName" placeholder="nazwisko">
+    <button type="submit">Wyszukaj</button>
+</form>
+</body>
+</html>

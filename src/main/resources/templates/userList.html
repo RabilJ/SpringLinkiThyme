@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="htttp://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+<li th:each="user: $(userList)">
+    <a th:href="@{|/user?name=$(user.lastName)|}">
+    th:text="|${user.firstName}${user.lastName}|"
+    </a>
+</li>
+    <li>Edyta Kowalska</li>
+</ul>
+</body>
+</html>
